@@ -1,0 +1,19 @@
+{
+    "name": "alexreut/test74",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "pa3datka",
+            "email": "pa3datka@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "pa3datka/phpenv": "dev-master"
+    }
+}

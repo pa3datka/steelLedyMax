@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "218377c75a8cac5952ed52c93afe51ce",
+    "packages": [
+        {
+            "name": "pa3datka/phpenv",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pa3datka/phpEnv.git",
+                "reference": "2edbf6a837ad4008901f732c68ecba85c660f014"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pa3datka/phpEnv/zipball/2edbf6a837ad4008901f732c68ecba85c660f014",
+                "reference": "2edbf6a837ad4008901f732c68ecba85c660f014",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pa3datka\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Aliaksei Reut",
+                    "email": "pa3datka@gmail.com"
+                }
+            ],
+            "description": "Reading enviroment varibles .env",
+            "support": {
+                "issues": "https://github.com/pa3datka/phpEnv/issues",
+                "source": "https://github.com/pa3datka/phpEnv/tree/master"
+            },
+            "time": "2022-05-25T17:25:00+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "pa3datka/phpenv": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}
