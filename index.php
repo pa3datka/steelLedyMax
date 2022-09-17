@@ -9,7 +9,6 @@ use App\Models\User;
 use App\Repositories\UserRepository;
 use Pa3datka\Env;
 
-var_dump(Env::env('DEBUG', false));
 if (Env::env('DEBUG', false)) {
     ini_set('error_reporting', E_ALL);
     ini_set('display_errors', 1);
@@ -29,11 +28,11 @@ try {
 /**
  * Get userList
  */
-$userList = $users->where(['firstname' => 'Bob', ['sex' => 1], ['id', '!=', 5]])->get();
+$userList = $users->where(['firstname' => 'Piter', ['sex' => 1], ['id', '<>', 5]])->get();
 //$userList = $users->whereIn('id', [1, 2, 3, 4, 5, 6, 7])->get();
 //$userList = $users->select(['id', 'firstname', 'sex'])->limit(5)->get();
-$userList = $users->select(['id', 'firstname', 'sex'])->where(['id', '<', 5])->limit(5)->get();
-
+//$userList = $users->select(['id', 'firstname', 'sex'])->where(['id', '<', 5])->limit(5)->get();
+//
 $html = '';
 foreach ($userList as $user) {
     $html .= User::getHtml($user);
@@ -44,10 +43,12 @@ echo $html;
 /**
  * Get User
  */
-//$user = $users->where(['firstname' => 'Bob', ['sex' => 1], ['id', '!=', 5]])->first();
+//$user = $users->where(['firstname' => 'Bob', ['sex' => 1], ['id', '<>', 5]])->first();
 //$user = $users->select(['id', 'firstname', 'sex'])->first();
-//$user = $users->select(['id', 'firstname', 'sex'])->where(['id', '<', 5])->limit(5)->first();
-//echo User::getHtml($user);
+//$user = $users->select(['id', 'firstname', 'sex'])->where(['id', '<', 5])->first();
+//if ($user) {
+//    echo User::getHtml($user);
+//}
 
 
 //UserModel
@@ -81,6 +82,7 @@ echo $html;
 /**
  * Update user
  */
+//$user->lastname = 'Bobik';
 //$user->update();
 
 /**

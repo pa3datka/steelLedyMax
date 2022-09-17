@@ -42,9 +42,10 @@ class QueryBuilder
      */
     public function where(array $whereParams): QueryBuilder
     {
+        $this->whereString = '';
         $whereString = $this->setMultipleParams($whereParams);
 
-        $this->whereString = $this->whereString === '' ? ' WHERE' . $whereString : ' AND' . $whereString;
+        $this->whereString = '' === $this->whereString ? ' WHERE' . $whereString : ' AND' . $whereString;
         return $this;
     }
 
@@ -57,6 +58,7 @@ class QueryBuilder
      */
     public function whereIn(string $fieldName, array $values): QueryBuilder
     {
+        $this->whereString = '';
         is_int($values[0]) && $this->whereString = ' WHERE `' . $fieldName . '` IN (' . implode(',', $values) . ')';
         !is_int($values[0]) && $this->whereString = ' WHERE `' . $fieldName . '` IN ("' . implode('","', $values) . '")';
 
