@@ -201,7 +201,7 @@ class User
         $listHtml .= '<td>' . ($user->lastname ?? '') . '</td>';
         $listHtml .= '<td>' . $user->getSex() . '</td>';
         $listHtml .= '<td>' . $user->getAge() . '</td>';
-        $listHtml .= '<td>' . date('Y-m-d', $user->date_birth) . '</td>';
+        $listHtml .= '<td>' . ($user->date_birth ? date('Y-m-d', $user->date_birth) : "") . '</td>';
         $listHtml .= '<td>' . ($user->motherland ?? '') . '</td>';
         $listHtml .= "</tr></table>";
         $listHtml .= '<br>';

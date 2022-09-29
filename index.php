@@ -28,10 +28,10 @@ try {
 /**
  * Get userList
  */
-$userList = $users->where(['firstname' => 'Piter', ['sex' => 1], ['id', '<>', 5]])->get();
+$userList = $users->where(['firstname' => 'Piter', ['sex' => 1], ['id', '<>', 4]])->get();
 //$userList = $users->whereIn('id', [1, 2, 3, 4, 5, 6, 7])->get();
 //$userList = $users->select(['id', 'firstname', 'sex'])->limit(5)->get();
-//$userList = $users->select(['id', 'firstname', 'sex'])->where(['id', '<', 5])->limit(5)->get();
+//$userList = $users->select(['id', 'firstname', 'sex'])->where(['id', '<', 20])->limit(5)->get();
 //
 $html = '';
 foreach ($userList as $user) {
@@ -43,7 +43,7 @@ echo $html;
 /**
  * Get User
  */
-//$user = $users->where(['firstname' => 'Bob', ['sex' => 1], ['id', '<>', 5]])->first();
+//$user = $users->where(['firstname' => 'Pavel', ['sex' => 1], ['id', '=', 4]])->first();
 //$user = $users->select(['id', 'firstname', 'sex'])->first();
 //$user = $users->select(['id', 'firstname', 'sex'])->where(['id', '<', 5])->first();
 //if ($user) {

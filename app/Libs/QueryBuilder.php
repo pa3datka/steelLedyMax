@@ -7,17 +7,17 @@ class QueryBuilder
     /**
      * @var string
      */
-    protected string $selectString = 'SELECT * FROM';
+    private string $selectString = 'SELECT * FROM';
 
     /**
      * @var string
      */
-    protected string $whereString = '';
+    private string $whereString = '';
 
     /**
      * @var string
      */
-    protected string $limit = 'LIMIT 100';
+    private string $limit = 'LIMIT 100';
 
     /**
      * Generate SELECT string
@@ -45,7 +45,7 @@ class QueryBuilder
         $this->whereString = '';
         $whereString = $this->setMultipleParams($whereParams);
 
-        $this->whereString = '' === $this->whereString ? ' WHERE' . $whereString : ' AND' . $whereString;
+        $this->whereString = '' === $this->whereString ? ' WHERE ' . $whereString : ' AND' . $whereString;
         return $this;
     }
 
