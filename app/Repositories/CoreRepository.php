@@ -40,7 +40,7 @@ abstract class CoreRepository extends QueryBuilder
         $models = $sth->fetchAll();
         $sth = null;
 
-        return $this->prepareUsers($models);
+        return $this->prepareModels($models);
     }
 
     /**
@@ -78,7 +78,7 @@ abstract class CoreRepository extends QueryBuilder
      * @param array $models
      * @return array
      */
-    private function prepareUsers(array $models): array
+    private function prepareModels(array $models): array
     {
         foreach ($models as &$model) {
             $model =  new $this->modelClass($model);
