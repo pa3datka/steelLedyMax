@@ -4,7 +4,6 @@ namespace App\Repositories;
 
 use App\DB\Connection;
 use App\Libs\QueryBuilder;
-use App\Models\ModelInterface;
 
 abstract class CoreRepository extends QueryBuilder
 {
